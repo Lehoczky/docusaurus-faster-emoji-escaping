@@ -13,11 +13,22 @@ const config = {
 				theme: {
 					customCss: "./src/css/custom.css",
 				},
-				docs: false,
 			}),
 		],
 	],
-	// future: { experimental_faster: true },
+
+	themeConfig:
+		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+		({
+			navbar: {
+				title: "My Site",
+				items: [{ to: "/docs", label: "docs", position: "left" }],
+			},
+		}),
+
+	future: {
+		experimental_faster: true,
+	},
 };
 
 export default config;
